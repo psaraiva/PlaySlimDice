@@ -24,8 +24,9 @@ class RollDiceAction extends DiceAction
             $this->dice->face = $this->dice::FACE_DEFAULT;
         }
 
-        $this->logger->info("Play de Game: face={$this->dice->face}, quantity={$this->dice->quantity}");
         $data = $this->play();
+        $dataLog = implode(',',$data['dice']);
+        $this->logger->info("Play the game: face={$this->dice->face}, quantity={$this->dice->quantity}, dice: {$dataLog}");
         return $this->respondWithData($data);
     }
 

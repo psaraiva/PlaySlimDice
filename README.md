@@ -6,7 +6,7 @@ This is game of dice, under format API on Slim Framework 4.
 
 - `git clone`;
 - `cd PlaySlimDice`
-- `docker-compose up -d`;
+- `docker-compose up -d --build`;
 - `docker exec -it play-slim-dice-api php /usr/bin/composer install`;
 
 -- -
